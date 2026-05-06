@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-white font-sans antialiased overflow-x-hidden;
+  }
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply max-w-7xl mx-auto px-5 sm:px-8;
+  }
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.25em] text-accent font-semibold;
+  }
+  .h2 {
+    @apply font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-[1.08] tracking-tight;
+  }
+  .h3 {
+    @apply font-display font-bold text-xl sm:text-2xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 whitespace-nowrap;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-bg hover:bg-accent-light active:scale-[0.97];
+  }
+  .btn-ghost {
+    @apply btn border border-white/10 text-white/80 hover:bg-white/5 hover:text-white hover:border-white/25;
+  }
+  .card {
+    @apply rounded-2xl border border-white/10 bg-bg-card transition-all duration-300;
+  }
+  .card:hover {
+    @apply border-white/15 bg-white/[0.05];
+  }
+  .divider {
+    @apply h-px bg-white/10;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Input autofill */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #18181b inset !important;
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff;
+}
