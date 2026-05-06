@@ -19,14 +19,14 @@ export default function Hero() {
     >
       {/* BG photo */}
       <motion.div style={{ y: yImg }} className="absolute inset-0 z-0">
-        <div className="hidden lg:block absolute inset-y-0 right-0 w-[55%]">
+        <div className="hidden lg:block absolute inset-y-0 right-0 w-[50%] xl:w-[45%]">
           <img
             src="/images/vk/photo_457253454_26796928.jpg"
             alt=""
             className="w-full h-full object-cover"
-            style={{ objectPosition: "center 18%" }}
+            style={{ objectPosition: "70% 18%" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-bg/50" />
         </div>
       </motion.div>
@@ -34,7 +34,7 @@ export default function Hero() {
       {/* Content */}
       <motion.div
         style={{ y: yText, opacity }}
-        className="container-x relative z-10 lg:max-w-[60%] w-full"
+        className="container-x relative z-10 lg:max-w-[55%] xl:max-w-[50%] w-full"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
